@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <h3>Hi ${request.userName}</h3>
+
+        <div>Please use authentication token to reset your password :
+            <a>${request.passwordResetUrl}</a>
+        </div>
+    </body>
+</html>

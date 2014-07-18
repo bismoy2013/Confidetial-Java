@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <h3>Hi ${request.firstName}</h3>
+
+        <div>Please click the link below to reset your password.
+            <a>${request.passwordResetUrl}</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<beans:bean id="defaultMailService" class="in.fissionlabs.kpinsights.mail.DefaultMailServiceImpl">
+		<beans:property name="mailSender" ref="mailSender" />
+		<beans:property name="templateMessage" ref="templateMessage" />
+		<beans:property name="velocityEngine" ref="velocityEngine" />
+		<beans:property name="passwordResetMailTemplateLocation" value="/WEB-INF/velocity/pwreset.vm" />
+		<beans:property name="mailEncoding" value="UTF-8" />
+	</beans:bean>
+
+	<beans:bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<beans:property name="host" value="smtp.sendgrid.net" />
+		<beans:property name="port" value="587" />
+		<beans:property name="username" value="kpinsights_local_server" />
+		<beans:property name="password" value="kpinsights#123" />
+	</beans:bean>
+
+	<beans:bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
+		<beans:property name="from" value="kpinsights_local@fissionlabs.in" />
+		<beans:property name="subject" value="Reset password request" />
+	</beans:bean>
+
+	<beans:bean id="velocityEngine"
+		class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<beans:property name="velocityProperties">
+			<beans:value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</beans:value>
+		</beans:property>
+	</beans:bean>
+
+</beans:beans>

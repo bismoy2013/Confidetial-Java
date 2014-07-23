@@ -10,8 +10,8 @@ public class StartApp {
 		
 		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 		
-		String emailAddress = "raghav.arram@fissionlabs.in";
-		String password = "sai123";
+		String emailAddress = "bismoy.murasing@fissionlabs.in";
+		String password = "hello123";
 	
 		System.out.println(passwordEncoder.encode(password));
 		String unEncodedPassword = emailAddress.concat("+").concat(password); 

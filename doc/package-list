@@ -1,1 +1,10 @@
+in.fissionlabs.kpinsights.controller
+in.fissionlabs.kpinsights.dao
+in.fissionlabs.kpinsights.mail
+in.fissionlabs.kpinsights.main
+in.fissionlabs.kpinsights.model
 in.fissionlabs.kpinsights.model.dto
+in.fissionlabs.kpinsights.model.hibernate
+in.fissionlabs.kpinsights.model.velocity
+in.fissionlabs.kpinsights.security
+in.fissionlabs.kpinsights.service

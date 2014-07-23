@@ -108,7 +108,7 @@ public interface AdminService
 	Status deleteGroup(Long id);
 	
 	/**
-	 * <h4>Display All Groups</h4>
+	 * <h4>Display Groups</h4>
 	 * <p>Displays all groups </p>
 	 * @returns all groups from the database
 	 */

@@ -30,9 +30,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 //public class User extends AbstractModel implements UserDetails{
 public class User extends AbstractModel implements UserDetails{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -489220319237146327L;
 
 	@Id

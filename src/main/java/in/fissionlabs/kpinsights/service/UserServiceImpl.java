@@ -48,11 +48,15 @@ public class UserServiceImpl implements UserService{
 		user.setCredentialsExpired(false);
 		user.setCreateTimestamp(new Date());
 
-		userDAO.create(user);
+		Boolean status = userDAO.create(user);
+		
+		if(status)
+			return user;
+		else
+			return null;
 		
 		// TODO send confirmation email with user`name and password.
 		
-		return user;
 	}
 
 	@Override 
@@ -165,7 +169,6 @@ public class UserServiceImpl implements UserService{
 		}else{
 			status.setInfo("Error updating User. Please try again.");
 		}
-
 		newDTO.setResult(user);
 		newDTO.setStatus(status);
 

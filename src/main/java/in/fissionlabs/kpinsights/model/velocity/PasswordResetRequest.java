@@ -18,7 +18,6 @@ public class PasswordResetRequest {
 	public void setPasswordResetUrl(String passwordResetUrl) {
 		this.passwordResetUrl = passwordResetUrl;
 	}
-	
 	public String getUserName() {
 		return userName;
 	}

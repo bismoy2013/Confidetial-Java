@@ -36,7 +36,7 @@ public class BasicAuthenticationFilter extends GenericFilterBean {
 			FilterChain chain) throws IOException, ServletException {
 
 
-		logger.info("Inside Basic Authentication Filter : ");
+		logger.debug("Inside Basic Authentication Filter method .  ");
 
 		// Check for authentication token in the servlet request
 		String authenticationToken = ((HttpServletRequest) request).getParameter("authenticationToken");
